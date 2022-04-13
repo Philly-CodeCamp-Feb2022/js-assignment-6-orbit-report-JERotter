@@ -13,11 +13,15 @@ export class Satellite {
 		this.orbitType = orbitType;
 		this.operational = operational;
    }
-	
+
+	// TODO 3a: fix isSpaceDebris check
 	isSpaceDebris(): boolean {
-		return true;
-   }
-
+		if (this.type === "Space Debris") {
+		 return true;
+   		} 
+	}
 }
-
-// TODO 3a: fix isSpaceDebris check
+// //troubleshooting stuff
+// let testJawn = new Satellite('fetchedSatellites[i].name', "Space Debris", "fetchedSatellites[i].launchDate", "fetchedSatellites[i].orbitType", false);
+// console.log(testJawn.type);
+// console.log(testJawn.isSpaceDebris());
