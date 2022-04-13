@@ -9,6 +9,8 @@ import { Satellite } from '../satellite';
 
 export class OrbitListComponent implements OnInit {
 
+	// alternateColor: string = '';
+
   @Input() satellites: Satellite[];
   constructor() { }
 

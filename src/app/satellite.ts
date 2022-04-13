@@ -21,7 +21,3 @@ export class Satellite {
    		} 
 	}
 }
-// //troubleshooting stuff
-// let testJawn = new Satellite('fetchedSatellites[i].name', "Space Debris", "fetchedSatellites[i].launchDate", "fetchedSatellites[i].orbitType", false);
-// console.log(testJawn.type);
-// console.log(testJawn.isSpaceDebris());

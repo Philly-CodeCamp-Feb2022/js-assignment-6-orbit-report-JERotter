@@ -9,30 +9,13 @@
     
 <!-- TODO 2b: use *ngFor to display satellite data in the table -->
 
-
-    <!-- <tr class="data-row" *ngFor = "let satellite of satellites">
-        <td>{{satellite.name}}</td> -->
-        <!-- TODO 3b: add style directive to conditionally highlight satellite type -->
-        <!-- <td>{{satellite.type}}</td>
-        <td>{{satellite.operational}}</td>
-        <td>{{satellite.orbitType}}</td>
-        <td>{{satellite.launchDate}}</td>
-    </tr> -->
-
     <tr class="data-row" *ngFor = "let satellite of satellites">
         <td>{{satellite.name}}</td>
-        <!-- TODO 3b: add style directive to conditionally highlight satellite type -->
-        <ng-container *ngIf = "satellite.isSpaceDebris(); else regularCell">
-            <td class="warning">{{satellite.type}}</td>
-        </ng-container>
-        <ng-template #regularCell>{{satellite.type}}</ng-template>
-        
+        <td [class.warning] = "satellite.isSpaceDebris()">{{satellite.type}}</td>
         <td>{{satellite.operational}}</td>
         <td>{{satellite.orbitType}}</td>
         <td>{{satellite.launchDate}}</td>
     </tr>
-
-
 </table>
 
 
