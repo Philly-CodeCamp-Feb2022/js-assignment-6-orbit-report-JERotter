@@ -28,7 +28,8 @@ export class AppComponent {
 					// add the new Satellite object to sourceList 
 					this.sourceList.push(satellite);
 				 }
-
+				console.log(fetchedSatellites[5].type);
+				console.log(fetchedSatellites);
 				 // make a copy of the sourceList to be shown to the user
 				 this.displayList = this.sourceList.slice(0);
 	  
@@ -45,6 +46,16 @@ export class AppComponent {
 			if (name.indexOf(searchTerm) >= 0) {
 				matchingSatellites.push(this.sourceList[i]);
 			}
+			
+			// let orbitType = this.sourceList[i].orbitType.toLowerCase();
+			// if (orbitType.indexOf(searchTerm) >= 0) {
+			// 	matchingSatellites.push(this.sourceList[i]);
+			// }// bonus orbitType search ***Caused Duplicate Search results***
+
+			// let type = this.sourceList[i].type.toLowerCase();
+			// if (type.indexOf(searchTerm) >= 0) {
+			// 	matchingSatellites.push(this.sourceList[i]);
+			// }// bonus type search ***Caused Duplicate Search results***
 		}
 		// assign this.displayList to be the array of matching satellites
 		// this will cause Angular to re-make the table, but now only containing matches
