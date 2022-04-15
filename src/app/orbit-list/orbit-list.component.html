@@ -9,7 +9,7 @@
     
 <!-- TODO 2b: use *ngFor to display satellite data in the table -->
 
-    <tr class="data-row" *ngFor = "let satellite of satellites">
+    <tr *ngFor = "let satellite of satellites" [class.altColor] = "satellites.indexOf(satellite) % 2 === 0" class="data-row" >
         <td>{{satellite.name}}</td>
         <td [class.warning] = "satellite.isSpaceDebris()">{{satellite.type}}</td>
         <td>{{satellite.operational}}</td>

@@ -11,7 +11,6 @@ export class OrbitCountsComponent implements OnInit {
 	
 	@Input() satellites: Satellite[];
 	
-	// total: number = 0;
 	
   constructor() { }
 
@@ -24,12 +23,10 @@ export class OrbitCountsComponent implements OnInit {
 	  for (let i = 0; i < this.satellites.length; i++) {
 		 if (this.satellites[i].type === type) {
 			count++;
-			// this.total = count + this.total;
 		 }
 	  }
 	
 	}
-	// console.log(this.total);
 	console.log(count);
 	return count;
  }

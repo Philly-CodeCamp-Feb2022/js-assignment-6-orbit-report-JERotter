@@ -10,6 +10,13 @@
 	padding: 6px;
 }
 
+.altColor {
+	background-color: #40c589;
+	text-align: left;
+	margin: 5px 10px;
+	padding: 6px;
+}
+
 table {
  color: #111;
  border-radius: 5px;
